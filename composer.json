@@ -1,0 +1,15 @@
+{
+    "name": "kevinlb/julie-website",
+    "autoload": {
+        "psr-4": {
+            "Kevinlb\\JulieWebsite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kevin le bot",
+            "email": "kevin.lebot@hotmail.fr"
+        }
+    ],
+    "require": {}
+}
