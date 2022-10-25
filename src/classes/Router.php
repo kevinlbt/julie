@@ -30,7 +30,7 @@ class Router {
 
     public function addAllRoutes () {
 
-        $this->addRoute('portfolio', ['WebsiteController','publishedArticles']);
+        $this->addRoute('articles', ['WebsiteController','articles']);
         
         $this->addRoute('home',['WebsiteController','home']);
         

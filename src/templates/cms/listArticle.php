@@ -18,8 +18,8 @@
             <li class="flex list gray-back"> 
                 <div>
                     <h3 class="articletitle"><?= $article->getTitle(); ?></h3>
-                    <p class="textcms"><?= $article->getContent(); ?> </p>
-                    <img src="<?= $article->getImagePath(); ?>" width="300" height="150"/>
+                    <p class="textcms"><?= nl2br($article->getContent()); ?> </p>
+                    <img src="<?= $article->getImagePath(); ?>" width="300" height="auto"/>
                 </div>
                 <div class="flex">
                     <div>

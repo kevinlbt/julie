@@ -4,7 +4,7 @@
     <?php endforeach; ?>
 </div>
 
-<form action="" method="POST" class="flex collum align border gray-back">
+<form action="" method="POST" enctype="multipart/form-data" class="flex collum align border gray-back">
     <label for="title" class="textcms size">Titre</label>
     <input type="text" name="title" class="field input" value="<?= $result[0]->getTitle() ?>">
     <label for="content" class="textcms size">Contenue de l'article</label>

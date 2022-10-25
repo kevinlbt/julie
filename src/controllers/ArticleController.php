@@ -98,19 +98,19 @@ class ArticleController extends AbstractController {
         if(isset($_GET['url']) && !empty($_GET['url'] )) {
             
             $id = explode('/', $_GET['url']);
-        
+            
+            $article = Article::getArticleContent($id);
+
             if (Errors::checkErrorArticle()) {
             
                 self::$notValidArticle = Errors::getErrors();
             }
             
             else {
-        
-                Article::updateArticle($id);
+                
                 Upload::uploadFile();
+                Article::updateArticle($id, $article);
             }
-            
-            $article = Article::getArticleContent($id);
         
             //display all categorie in a select html
             $allcategory = Category::displayCategory();
@@ -143,7 +143,7 @@ class ArticleController extends AbstractController {
             
             Article::publishArticleId($id);
             
-            header('location: /Zeremy-website/articles');
+            header('location: /julie-website/articles');
 
         }
     }
@@ -159,7 +159,7 @@ class ArticleController extends AbstractController {
             
             Article::unPublishArticle($id);
             
-            header('location: /Zeremy-website/articles');
+            header('location: /julie-website/articles');
         }    
     }
     

@@ -20,19 +20,13 @@ class WebsiteController extends AbstractController {
         return $data;
         
     }
-
-    //realisation page display all articles when is publish
-    public static function publishedArticles () {
-        
-        $category = Category::displayCategory();
-
-        self::renderBis('portfolio', $category);
-    }
     
     //home page
     public static function home () {
-        
-        self::renderBis('home');
+
+        $res = Article::getArticles();
+
+        self::renderBis('home', $res["data"]);
     }
     
     //contact page with php mailer
@@ -114,5 +108,12 @@ class WebsiteController extends AbstractController {
     public static function mentionslegales () {
         
         self::renderBis('mentionslegales');
+    }
+
+    public static function articles () {
+
+        $res = Article::getArticles();
+
+        self::renderBis('articles', $res["data"]);
     }
 }
