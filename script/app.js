@@ -1,4 +1,8 @@
 
+document.addEventListener('DOMContentLoaded', function () {
+
+  AOS.init();
+
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -15,3 +19,7 @@ const observer = new IntersectionObserver(entries => {
   });
   
   observer.observe(document.querySelector('.zone_texte_wrapper'));
+
+});
+
+

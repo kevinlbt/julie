@@ -116,4 +116,24 @@ class WebsiteController extends AbstractController {
 
         self::renderBis('articles', $res["data"]);
     }
+
+    public static function onearticle () {
+
+        if(isset($_GET['url']) && !empty($_GET['url'] )) {
+
+            $id = explode('/', $_GET['url']);
+
+            $resone = Article::getOneArticles($id[1]);
+
+            $res = Article::getArticles();
+
+            self::renderBis('onearticle', [$resone['data'], $res['data']]);
+
+        }    
+    }
+
+    public static function parcours () {
+        
+        self::renderBis('parcours');
+    }
 }

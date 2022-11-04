@@ -82,4 +82,33 @@ class Article {
 
         return $res;
     }
+
+    public static function getOneArticles ($id) {
+
+        $curl = curl_init(); //Initializes curl
+        curl_setopt($curl, CURLOPT_URL, 'http://localhost:1337/api/articles/'.$id.'?populate=*');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/json'
+        ]); // Sets header information for authenticated requests
+
+        $resone = curl_exec($curl);
+        curl_close($curl);
+
+        $resone = json_decode($resone);
+
+        function to_array($object) {
+            if (is_object($object)) {
+             return array_map(__FUNCTION__, get_object_vars($object));
+            } else if (is_array($object)) {
+             return array_map(__FUNCTION__, $object);
+            } else {
+             return $object;
+            }
+        }
+
+        $resone = to_array($resone);
+
+        return $resone;
+    }
 }

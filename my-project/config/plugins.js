@@ -14,7 +14,6 @@ module.exports = () => {
             toolbar: {
               items: [
                 'paragraph',
-                'heading1',
                 'heading2',
                 '|',
                 'bold',

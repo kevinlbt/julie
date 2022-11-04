@@ -43,21 +43,7 @@ body
     margin: auto;
     padding: auto;
 }
-h1 {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bolder;
-    font-size: 3vw;
-    padding-left: 5vw;
-    margin-bottom: 2.5vw;
-}
-h2 ,h3 
-{
-    font-family: 'Lora', serif;  
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 4px;
-    margin-bottom: 1.5vw;
-}
+
 
 /* nav bar and header  */
 
@@ -77,9 +63,10 @@ nav
 
 .logo
 {
-width: 15vw;
-height: auto;
-margin-top: 10px;
+    width: 15vw;
+    height: auto;
+    margin-top: 10px;
+    filter: drop-shadow(-15px 3px 12px rgba(0, 0, 0, 0.84));
 }
 
 nav ul
@@ -98,22 +85,41 @@ nav a
     color: black;
 }
 
-.hoverr a:hover  
+.hoverr {
+    position: relative;
+}
+.hoverr:hover::before  
 {
+    position: absolute;
+    width: 10px;
+    top: 0.6vw;
+    left:  -2.3vw;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: '\f13d';
+    font-size: 1.5vw;
     color: #596643;
-    border-bottom: 1px solid #596643;
+    padding-left: -20px;
 }
 
 
 /* main article eco def header page */
 
+
+.forest-back {
+    background-image: url('../assets/images/image_2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2vw;
+    margin: 3vw auto 5vw auto;
+    border-radius: 3px;
+}
 .defeco
 {   
     display: flex;
     align-items: center;
-    background-color: white;
-    margin-bottom: 6vw;
-    margin-top: 2vw;
+    background-color: rgba(255, 255, 255, 0.60);
+    border-radius: 3px;
 }
 
 .texte
@@ -124,7 +130,7 @@ nav a
     padding-top: 1vw;
 }
 
-article
+.art-def
 {
     text-align: justify;
     margin-right: 7vw;
@@ -151,6 +157,7 @@ article
     margin-bottom: 3vw;
     margin-right: 4vw;
     box-shadow: 0px 4px 4px #1c1a19;
+    border-radius: 3px;
 }
 
 
@@ -181,7 +188,7 @@ article
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 38vw;
+    height: 37vw;
     z-index: 2;
 }
 
@@ -205,13 +212,12 @@ article
     background-color: white;
     height: 15vw;
     text-align: center;
-    padding-top: 4.3vw;
-    padding-bottom: 1vw;
-    padding-right: 2vw;
-    padding-left: 2vw;
-    
+    padding: 4.3vw 2vw 1vw 2vw;
+    border: 5px solid #FBF7F2;
+    border-radius: 13px 13px 13px 13px; 
 }
-.zone_texte_wrapper:hover {
+
+.zone_texte_wrapper:hover, .foret:hover {
     -ms-transform: scale(1.15); /* IE 9 */
     -webkit-transform: scale(1.15); /* Safari 3-8 */
     transform: scale(1.15);
@@ -232,12 +238,66 @@ article
     margin-top: 1vw;
 }
 
+
+/* objectif  */
+
+.titre_objectif {
+    font-family: 'Amatic SC', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    padding: auto;
+}
+
+.objectif {
+    width: 100%;
+    padding-top: 1vw;
+}
+
+.obj-bloc {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 4vw;
+}
+
+.obj-bloc div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+}
+
+.obj-bloc div i {
+    text-align: center;
+    margin: 1vw 0;
+    color: #C1543C;
+}
+
+.obj-bloc div p {
+    text-align: center;
+}
+
+/* background fixed phare  */
+
+.lighthouse-back {
+    height: 45vw;
+    background-image: url('../assets/images/lighthouse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 /* Articles */ 
 
 .bloc_page_2
 {
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: auto;
     padding: auto;
     justify-content: space-between;
@@ -245,11 +305,11 @@ article
 
 .titre_article
 {
-    font-family: 'Lora', serif;
+    font-family: 'Amatic SC', cursive;
     font-weight: normal;
     text-transform: uppercase;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 5vw;
     margin-bottom: 4vw;
     margin-top: 4vw;
     padding: auto;
@@ -284,12 +344,18 @@ article
     width: 32%;
     text-align: center;
     padding: 0 2vw 2vw 2vw;
-    margin-bottom: 3vh;
+    margin-bottom: 4vw;
     border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.78);
 }
 
 .article-b h3 {
-    font-size: 1.2vw;
+    font-family: 'Amatic SC', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1vw 1vw;
+    font-size: 2.5vw;
 }
 
 .bouton
@@ -307,12 +373,20 @@ article
     margin: auto;
     transition: 0.4s;
 }
+@keyframes glow{
+    from{text-shadow: 0px 0px 5px #fff,0px 0px 5px #614ad3;}
+    to{text-shadow: 0px 0px 20px #fff,0px 0px 20px #614ad3;}
+  }
 
 .bouton:hover {
+    animation-name: glow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     -webkit-box-shadow: -1px 1px 5px 9px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.75);
     box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.75);
-    color: black;
+    background-color: #303625;
 }
 .img
 {
@@ -320,11 +394,9 @@ article
     height: 13vw;
     margin-top: 1.5vw;
     margin-bottom: 2vw;
-    object-fit: cover;
+    border-radius: 3px;
     
 }
-
-
 
 /* Footer */
 
@@ -333,25 +405,299 @@ footer
     display: flex;
     flex-direction: column;
     background-color: #e4d3c6;
-    height: 14vw;
-    align-items: flex-end;
+    align-items: center;
 }
 
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer div {
+    margin: 2vw auto;
+    text-align: center;
+}
+.footer div p {
+    margin-bottom: 2vw;
+}
+
+.footer div ul {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;  
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    list-style-type: none;
+    text-align: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.footer div ul li a {
+    text-decoration: none;
+    color: black;
+}
 .zone_texte_2
 {
-    margin: auto;
     color: white;   
     font-size: 1vw;
     width: 20vw;
     text-align: center;
 }
 
-
 /* page articles */
+
 
 .paraset p {
     font-family: 'Lora', serif;  
     font-weight: normal;
     font-size: 0.9vw;
     padding: 1vw;
+}
+
+.bloc_page_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    width: 80%;
+    margin: auto;
+    padding: auto;
+    margin-bottom: 5vw;
+}
+
+.grid-item {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0 2vw 2vw 2vw;
+    margin-bottom: 3vh;
+    border-radius: 3px;
+}
+
+.baniere
+{
+    position: relative;
+    margin: 2vw auto  6vw auto;
+    background: url('../assets/images/book2.jpg') no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 30vw;
+    width: 85%;
+    outline: 6px solid #B5A89A;
+    outline-offset: 8px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 28px 13px rgba(0, 0, 0, 0.93) inset;
+    z-index: 2;
+}
+
+.baniere_txt
+{
+    font-family: 'Amatic SC', cursive;
+    font-size: 4vw;
+    position: absolute;
+    width: 30%;
+    height: 9vw;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    letter-spacing: 8px;
+    border-radius: 0.3vw;
+    z-index: 1;
+}
+
+.baniere_txt h1 {
+    margin-top: -1vw;
+}
+
+
+/* One articles page */
+
+.Titre_principal
+{
+    width: 80%;
+    background-color: #e4d3c6;
+    margin: 2vw auto 4vw auto;
+    padding-left: 4vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    border-radius: 94% 6% 96% 4% / 6% 61% 39% 94% ;
+}
+
+.Titre_principal h1 {
+    font-family: 'Amatic SC', cursive; 
+    font-weight: bold;
+    font-size: 4.3vw;
+}
+
+.section_2
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5.5vw;
+}
+
+.Titre_1
+{
+    font-family: 'Amatic SC', cursive;
+    font-weight: normal;
+    font-size: 3.5vw;
+    margin-bottom: 4vw;
+    margin-left: 3vw;
+}
+
+.art_2
+{
+    text-align: justify;
+    line-height: 1.2vw;
+    padding-left: 2.5vw;
+    
+}
+
+.foret
+{
+    width: 40%;
+    height: auto;
+    border-radius: 80% 20% 83% 17% / 15% 83% 17% 85% ;
+    margin-left: -5vw;
+    transition: 0.3s;
+}
+
+.img_foot /* Z index si deborde */
+{
+    position: absolute;
+    width: 54.5%;
+    right: 11.8vw;
+    height: 3vw;
+    align-self: flex-end;
+    background-color: #e4d3c6;
+    border-radius: 80% 20% 79% 21% / 53% 39% 61% 47% ;
+}
+
+.content-bis {
+    padding-bottom: 5vw;
+}
+
+.content-bis p {
+
+    font-family: 'Lora', serif; 
+    font-weight: lighter;
+    font-size: 1vw;
+    padding-top: 1vw;
+    text-align: center;
+}
+
+.content-bis h2 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1vw 1vw;
+    font-size: 3vw;
+}
+
+
+/* parcours */ 
+
+.video_div {
+    position: relative;
+    width: 100%;
+    height: 35vw;
+    margin: 2vw 0;
+    filter: grayscale(0.3)
+}
+.background-video {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.comfy-back {
+    background-image: url('../assets/images/comfy.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2vw;
+    margin: 3vw auto 5vw auto;
+    border-radius: 3px;
+}
+
+.formcontact {
+    width: 40%;
+    margin: auto;
+}
+
+.formcontact form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+}
+
+.formcontact form label {
+    font-family: 'Amatic SC', cursive;
+    font-weight: normal;
+    font-size: 1.7vw;
+    padding-top: 1vw;
+}
+.fieldfill {
+    height: 2vw;
+    border: 1px solid gray ;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 0.7vw;
+    font-size: 0.8vw;
+}
+.fieldfill:focus {
+    border: 3px solid #e4d3c6 ;
+}
+.name-contact {
+    display: flex;
+    justify-content: space-between;
+}
+.side {
+    width: 48%;
+}
+.textfill {
+    height: 10vw;
+    width: 100%;
+    margin-bottom: 0.7vw;
+    border: 1px solid gray ;
+    border-radius: 3px;
+    outline: none;
+}
+.textfill:focus {
+    border: 3px solid #e4d3c6;
+    margin-left: -4px;
+}
+         
+.contact-button {
+    width: 20%;
+    background-color: #596643;
+    margin: 0.4vw;
+    padding: 0.6vw 0.6vw;
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s;
+    color: black;    
+    font-size: 1vw;        
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    color: #fff;
+    background-color: #e4d3c6;
 }

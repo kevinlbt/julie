@@ -33,10 +33,11 @@
         
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon-logo.png">
     <link rel="stylesheet" href="https://use.typekit.net/bjn2kly.css">
-    <link href="./style/style.css" rel="stylesheet"/>
+    <link href="http://localhost:8080/test-website/style/style.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link href="./node_modules/aos/dist/aos.css" rel="stylesheet">
    
 </head>
 
@@ -52,12 +53,17 @@
 
     <?php if (isset($templates) && $templates === "articles") {require './src/templates/sites/articles.php';} ?>
 
+    <?php if (isset($templates) && $templates === "onearticle") {require './src/templates/sites/onearticle.php';} ?>
+
     <?php if (isset($templates) && $templates === "mentionslegales") {require './src/templates/sites/mentions.php';} ?>
+
+    <?php if (isset($templates) && $templates === "parcours") {require './src/templates/sites/parcours.php';} ?>
     
     <?php require './src/templates/sites/footer.php'; ?>
 
 
 <script src="https://kit.fontawesome.com/1012edd4b6.js" crossorigin="anonymous"></script>
-<script src="./script/app.js"></script>
+<script src="./node_modules/aos/dist/aos.js"></script>
+<script type="module" src="./script/app.js"></script>
 </body>
 </html>
