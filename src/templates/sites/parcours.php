@@ -27,9 +27,15 @@
         </article>
         <img src="assets/images/cuptea.jpg" alt="" class="tableau">
     </section>
+    <div class="arrow">
+        <i id="arrow" class="fa-solid fa-arrow-down-long"></i>
+    </div>
+    <div class="arrowup">
+        <i id="arrowup" class="fa-solid fa-arrow-up-long"></i>
+    </div>
 </div> 
 
-<div class="formcontact">
+<div id="contact" class="formcontact">
     <form method="POST">
         <label for="name">Nom</label>
         <div class="name-contact">
@@ -38,8 +44,6 @@
         </div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" class="fieldfill">
-        <label for="subject">Sujet</label>
-        <input type="text" name="subject" id="subject" class="fieldfill">
         <label for="textarea">Message</label>
         <textarea name="message" id="textarea" cols="70" class="textfill"></textarea>
         <button type="submit" class="contact-button">Envoyer</button>

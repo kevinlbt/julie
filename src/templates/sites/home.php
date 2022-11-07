@@ -23,7 +23,7 @@
 </div> 
 
 
-<div class="background" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50"> <!-- Image de fond-->
+<div class="background" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="25"> <!-- Image de fond-->
     <div class="zone_texte_wrapper"> 
         <div class="zone_texte"><!-- fond blanc/zone de texte -->
             <p class="cit"> Nulla imperdiet mauris sed sapien dignissim id aliquam est aliquam. Maecenas non odio ipsum, a elementum nisi. 
@@ -38,15 +38,15 @@
 <div class="objectif">
     <h2 class="titre_objectif"> Objectifs </h2>
     <div class="obj-bloc">
-        <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="50">
+        <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="25">
             <i class="fa-solid fa-bullseye fa-8x"></i>
             <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit a commodi beatae consequatur ipsum esse consectetur sint.</p>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="50">
+        <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="25">
             <i class="fa-solid fa-vector-square fa-8x"></i>
             <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit a commodi beatae consequatur ipsum esse consectetur sint.</p>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1500" data-aos-delay="50">
+        <div data-aos="fade-left" data-aos-duration="1500" data-aos-delay="25">
             <i class="fa-regular fa-clipboard fa-8x"></i>
             <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit a commodi beatae consequatur ipsum esse consectetur sint.</p>
         </div>
@@ -64,7 +64,7 @@
 
 <?php for($i = 0; $i <= 2; $i++) : ?> 
             
-    <div class="article-b" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" data-aos-delay="50" data-aos-easing="ease-in-out" data-aos-offset="100" >
+    <div class="article-b" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" data-aos-delay="25" data-aos-easing="ease-in-out" data-aos-offset="100" >
         <div class="icones_1">
             <i class="fa-brands fa-pagelines"></i>
             <i class="fa-brands fa-pagelines"></i>

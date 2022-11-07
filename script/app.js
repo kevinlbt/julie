@@ -23,3 +23,32 @@ const observer = new IntersectionObserver(entries => {
 });
 
 
+// arrow contact 
+
+let arrow = document.getElementById('arrow');
+let arrowup = document.getElementById('arrowup');
+let contact = document.getElementById('contact');
+
+arrow.addEventListener('click', function () {
+
+    contact.style.display = 'block';
+    contact.classList.remove('contactDown-animation');
+    contact.classList.add('contact-animation');
+    arrow.style.display = 'none';
+    arrowup.style.display = 'block';
+
+
+})
+
+arrowup.addEventListener('click', function () {
+
+  setTimeout(() => {
+    contact.style.display = 'none';
+  },1000);
+  contact.classList.remove('contact-animation');
+  contact.classList.add('contactDown-animation');
+  arrowup.style.display = 'none';
+  arrow.style.display = 'block';
+
+})
+
