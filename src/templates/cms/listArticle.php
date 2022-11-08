@@ -20,10 +20,11 @@
                     <h3 class="articletitle"><?= $article->getTitle(); ?></h3>
                     <p class="textcms"><?= nl2br($article->getContent()); ?> </p>
                     <img src="<?= $article->getImagePath(); ?>" width="300" height="auto"/>
+                    <p class="textcms"><?= nl2br($article->getContentBis()); ?> </p>
                 </div>
                 <div class="flex">
                     <div>
-                        <a href="/julie-website/update-article/<?= $article->getId(); ?>" class="no-underline">
+                        <a href="/test-website/update-article/<?= $article->getId(); ?>" class="no-underline">
                             <button type="button" name="updateArticle" class="button default textcms">modifier</button>
                         </a>
                     </div>
@@ -32,7 +33,7 @@
                         <div id="modal<?php echo $count; ?>" class="modalCms" name="var" data-id="<?php echo $count; ?>">
                             <div class="modalContentCms flex collum">
                                 <p>Es-tu sur de vouloir supprimer l'article : <?= $article->getTitle(); ?> ?</p>
-                                <a href="/julie-website/deleteArticle/<?= $article->getId(); ?>" class="no-underline">
+                                <a href="/test-website/deleteArticle/<?= $article->getId(); ?>" class="no-underline">
                                     <button type="button" name="deleteArticle" class="button delete align textcms" data-id="<?php echo $count; ?>">supprimer</button>
                                 </a>
                                 <button class="cancelCms" data-id="<?php echo $count; ?>">annuler</button>

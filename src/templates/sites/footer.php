@@ -11,7 +11,7 @@
             <ul>
                 <li class="hoverr"><a href="/test-website/"> Home </a></li>
                 <li class="hoverr"><a href="/test-website/articles"> Articles </a></li>
-                <li class="hoverr"><a href="/test-website/parcours"> Parcours </a></li>
+                <li class="hoverr"><a href="/test-website/parcours"> Témoignage </a></li>
                 <li class="hoverr"><a href="/test-website/apropos"> Qui suis-je </a></li>
             </ul> 
         </div>

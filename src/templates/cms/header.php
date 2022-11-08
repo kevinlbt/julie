@@ -4,10 +4,10 @@
     
     <ul class="flex align">
         <?php if($templates !== 'articles') : ?>
-            <li class="no-liststyle"><a href="/julie-website/articles"><button class="button default align textcms">Articles</button></a></li>
+            <li class="no-liststyle"><a href="/test-website/gestion"><button class="button default align textcms">Articles</button></a></li>
         <?php endif ?>
         <?php if($templates !== 'new-article') : ?>
-            <li class="no-liststyle"><a href="/julie-website/new-article"><button class="button default align textcms">+ Ajouter un article</button></a></li>
+            <li class="no-liststyle"><a href="/test-website/new-article"><button class="button default align textcms">+ Ajouter un article</button></a></li>
         <?php endif ?>
     </ul>
 

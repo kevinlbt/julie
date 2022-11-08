@@ -41,7 +41,7 @@ class ArticleController extends AbstractController {
         
         }
         
-        self::render('articles', [$articles, $category]);
+        self::render('gestion', [$articles, $category]);
         
     }
 
@@ -101,7 +101,7 @@ class ArticleController extends AbstractController {
             
             $article = Article::getArticleContent($id);
 
-            if (Errors::checkErrorArticle()) {
+            if (Errors::checkUpdateErrorArticle()) {
             
                 self::$notValidArticle = Errors::getErrors();
             }
@@ -143,7 +143,7 @@ class ArticleController extends AbstractController {
             
             Article::publishArticleId($id);
             
-            header('location: /julie-website/articles');
+            header('location: /test-website/gestion');
 
         }
     }
@@ -159,7 +159,7 @@ class ArticleController extends AbstractController {
             
             Article::unPublishArticle($id);
             
-            header('location: /julie-website/articles');
+            header('location: /test-website/gestion');
         }    
     }
     

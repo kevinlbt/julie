@@ -24,7 +24,65 @@ class Errors {
             if (isset($_POST['title']) && empty($_POST['title'])) {
 
                 self::$errors[] = 'Il te faut un titre !';
+            }
+                
+            if (!isset($_POST['category'])) {
+             
+                self::$errors[] = 'il faut préciser au moins une categorie pour ton article';
+            }
+
+            if (isset($_FILES['images'])  && empty($_FILES['images']['name'])) {
+
+                self::$errors[] = 'il faut une image';
+            }
+
+
+            if (isset($_FILES['images']) && !empty($_FILES['images']['name'])) {
+
+                if (getimagesize($_FILES["images"]["tmp_name"]) === false) {
+
+                    self::$errors[] = "Le fichier n'est pas une images";
+                }
+
+                if (file_exists("./assets/uploads/" . basename($_FILES["images"]["name"]))) {
+
+                    self::$errors[] = "Le fichier existe déjà";
+                }
+
+                if ($_FILES["images"]["size"] > 500000) {
+
+                    self::$errors[] = "l'images est trop grande";
+                }
+
+                if(strtolower(pathinfo(("./assets/uploads/" . basename($_FILES["images"]["name"])),PATHINFO_EXTENSION)) != "webp") {
+
+                    self::$errors[] = "L'images doit être au format webp";
+                }
+            }   
+
+            if (count(self::$errors) > 0){
+                
+                return self::$errors;
+            }
+        
+        endif;
+        
+    }
+    
+    public static function checkUpdateErrorArticle () {
+        
+        self::$errors = [];
+        
+        if (isset($_POST) && !empty($_POST)) :
+        
+            if (!preg_match("#^[a-zA-Z0-9À-ú\.:\!\?\&',\s-]{1,150}$#i", $_POST['title'])) {
+                        
+                self::$errors[] = 'Le titre doit faire moins de 150 caractères';
+            }
             
+            if (isset($_POST['title']) && empty($_POST['title'])) {
+
+                self::$errors[] = 'Il te faut un titre !';
             }
                 
             if (!isset($_POST['category'])) {
@@ -63,7 +121,7 @@ class Errors {
         endif;
         
     }
-    
+
     public static function checkErrorAuth () {
         
         self::$errors = [];

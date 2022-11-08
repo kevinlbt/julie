@@ -1,0 +1,322 @@
+
+
+:root {
+    --back-color: #FCF9F8;
+    --back-modal-color: #1c1c1c;
+    --back-color-footer: #EEEBEA;
+    --main-color: #e4d3c6;
+    --text-color: black;
+    --text-color-white: aliceblue;
+    --input-border-color: #a7afc2;
+    --font-title: chantal,sans-serif;
+    --font: 5vw;
+    --line: calc(var(--font) * 3.5);
+    --move: calc(-1 * var(--line));
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ---------------------------- style css cms ------------------------------- */
+/* ------------------------------------------------------------------------------ */
+
+.flex {
+    display: flex;
+}
+.collum {
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/*---------------title - text----------------*/
+
+.welcome {
+    font-size: 1.7em;
+    align-self: center;
+    padding: 0px 15px;
+}
+.article {
+    font-family: var(--font-title);
+    font-size: 2.7em;;
+    padding: 20px 0px;
+}
+.articletitle {
+    font-size: 2em;
+    padding: 20px 0px;
+}
+.textcms {
+    font-family: 'Bebas Neue', cursive;
+    margin: 5px 5px;
+}
+.size {
+    font-size: 1.7em;
+}
+.valide-msg {
+    color: rgb(36, 151, 36);
+}
+.not-valide-msg {
+    color: rgb(206, 36, 36);
+}
+.titlecms {
+    padding-top: 20px;
+}
+.no-underline {
+    text-decoration: none;
+}
+.no-liststyle {
+    list-style: none;
+}
+.head-title {
+    color: var(--text-color-white);
+    font-family: var(--font-title);
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+/*---------- bloc - input - select----------*/
+
+.list {
+    flex-direction: column;
+}
+.field {
+    margin: 30px;
+}
+.input {
+    height: 25px;
+    width: 50%;
+    border: 3px solid var(--input-border-color) ;
+    border-radius: 8px;
+    outline: none;
+}
+.textarea {
+    border: 3px solid var(--input-border-color) ;
+    border-radius: 8px;
+    outline: none;
+}
+.input:focus {
+    border: 3px solid var(--main-color);
+}
+.textarea:focus {
+    border: 3px solid var(--main-color);
+}
+.select {
+    width: 400px;
+}
+.categorie {
+    padding: 30px;
+}
+.catelist {
+    margin-left: 60px;
+}
+.no-padding {
+    padding: 0;
+}
+.login {
+    margin-top: 80px;
+    border: 1em solid var(--input-focus);
+}
+.logout {
+    justify-content: space-between;
+}
+
+.form {
+    margin: 5px 200px;
+}
+.gray-back {
+    margin: 20px 5px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+}
+
+
+/* ---------header--------- */
+
+.head {
+    background-color: #1f1d1d;
+    height: 6em;
+}
+
+.align {
+    align-items: center;
+    align-self: center;
+}
+
+/* nav button */
+
+.navcms a:hover {
+    color: var(--main-color);
+    background: #fff;
+    transition: 500ms ease all;
+}
+
+.button {
+    background: var(--main-color);
+    color: black;
+    font-size: 1.1em;
+    padding: 7px 20px;
+    margin: 15px;
+    cursor: pointer;
+    transition: 500ms ease all;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.default:hover {
+    background: #fff;
+    transition: 500ms ease all;
+    color: #228DD7 ;
+    border: 2px solid #228DD7;
+}
+.delete:hover {
+    background: #fff;
+    transition: 500ms ease all;
+    color: #D73A2D ;
+    border: 2px solid #D73A2D ;
+}
+.publish:hover {
+    background: #fff;
+    transition: 500ms ease all;
+    color: #5DB024;
+    border: 2px solid #5DB024;
+}
+
+
+/* login */
+
+.sizelog {
+    font-size: 1.5em;
+}
+
+/*---------------------modal delete style ------------------------*/
+
+.modalCms {
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+ }
+.modalContentCms {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #fefefe;
+    border-radius: 0.5em;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+ }
+.modalContentCms button {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 0.3em;
+    padding: 10px;
+ }
+.cancelCms {
+    align-self: center;
+    text-align: center;
+}
+.cancelCms:hover {
+    background-color: rgb(167, 167, 167);
+ }
+
+/*---------------------multi select style-------------------------*/ 
+
+.multiselect-dropdown{
+    display: inline-block;
+    padding: 2px 5px 0px 5px;
+    margin: 30px 0px;
+    border-radius: 4px;
+    border: solid 1px #ced4da;
+    background-color: white;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+  }
+.multiselect-dropdown span.optext, .multiselect-dropdown span.placeholder{
+    margin-right:0.5em; 
+    margin-bottom:2px;
+    padding:1px 0; 
+    border-radius: 4px; 
+    display:inline-block;
+  }
+.multiselect-dropdown span.optext{
+    background-color:lightgray;
+    padding:1px 0.75em; 
+  }
+.multiselect-dropdown span.optext .optdel {
+    float: right;
+    margin: 0 -6px 1px 5px;
+    font-size: 0.7em;
+    margin-top: 2px;
+    cursor: pointer;
+    color: #666;
+  }
+.multiselect-dropdown span.optext .optdel:hover { color: #c66;}
+.multiselect-dropdown span.placeholder{
+    color:#ced4da;
+  }
+.multiselect-dropdown-list-wrapper{
+    box-shadow: gray 0 3px 8px;
+    width: 400px;
+    z-index: 100;
+    padding:2px;
+    border-radius: 4px;
+    border: solid 1px #ced4da;
+    display: none;
+    margin: -1px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    background: white;
+  }
+.multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
+    margin-bottom:5px;
+    width: 150px;
+  }
+.multiselect-dropdown-list{
+    padding:2px;
+    height: 15rem;
+    width: 170px;
+    overflow-y:auto;
+    overflow-x: hidden;
+  }
+.multiselect-dropdown-list::-webkit-scrollbar {
+    width: 6px;
+  }
+.multiselect-dropdown-list::-webkit-scrollbar-thumb {
+    background-color: #bec4ca;
+    border-radius:3px;
+  }
+.multiselect-dropdown-list div{
+    padding: 5px;
+  }
+.multiselect-dropdown-list input{
+    height: 1.15em;
+    width: 1.15em;
+    margin-right: 0.35em;  
+  }
+.multiselect-dropdown-list div:hover{
+    background-color: #ced4da;
+  }
+.multiselect-dropdown span.maxselected {width:100%;}
+.multiselect-dropdown-all-selector {border-bottom:solid 1px #999;}

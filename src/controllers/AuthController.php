@@ -46,7 +46,7 @@ class AuthController extends AbstractController {
                 
                 else {
                     
-                    header('location: /julie-website/articles');
+                    header('location: /test-website/gestion');
                 }
             }
         }   
@@ -59,7 +59,7 @@ class AuthController extends AbstractController {
 
         Authenticator::logout();
         
-        header('Location: /julie-website/login');
+        header('Location: /test-website/login');
     }
 }
 

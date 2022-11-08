@@ -9,7 +9,7 @@
 <div class="bloc_page comfy-back">
     <section class="defeco">
         <article class="art-def">
-            <h1 class="Titre_Def"> PARCOURS </h1>
+            <h1 class="Titre_Def"> Témoignage </h1>
             <p class="texte">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sagittis massa. 
                 Nulla facilisi. Cras id arcu lorem, et semper purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 

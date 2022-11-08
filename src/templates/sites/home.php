@@ -64,17 +64,17 @@
 
 <?php for($i = 0; $i <= 2; $i++) : ?> 
             
-    <div class="article-b" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" data-aos-delay="25" data-aos-easing="ease-in-out" data-aos-offset="100" >
+    <div class="article-b" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="100" >
         <div class="icones_1">
             <i class="fa-brands fa-pagelines"></i>
             <i class="fa-brands fa-pagelines"></i>
         </div>
-        <h3 class="title_lonely"> <?= $result[$i]['attributes']['titre']; ?> </h3>
-        <div class="content"> <?= $result[$i]['attributes']['contenue']; ?> </div>
+        <h3 class="title_lonely"> <?= $result[$i]->getTitle(); ?> </h3>
+        <div class="content"> <?= $result[$i]->getContent(); ?> </div>
         <div class="redim">
-            <img src="./my-project/public<?= $result[$i]['attributes']['images']['data'][0]['attributes']['url']; ?>" alt="" class="img">
+            <img src="<?= $result[$i]->getImagePath(); ?>" alt="" class="img">
         </div>
-        <a href="./onearticle/<?= $result[$i]['id']; ?>" class="bouton">En savoir plus</a>
+        <a href="./onearticle/<?= $result[$i]->getId(); ?>" class="bouton">En savoir plus</a>
     </div>
 
 <?php endfor ?>

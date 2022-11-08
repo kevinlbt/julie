@@ -19,12 +19,12 @@ font-family: 'Amatic SC', cursive;
 font-family: 'Lora', serif;
 */
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 /* ------------------------------------------------------------------------------ */
 /* ---------------------------- style css website ------------------------------- */
@@ -329,10 +329,6 @@ nav a
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
     width: 95%;
-}
-
-.content p {
-
     font-family: 'Lora', serif; 
     font-weight: normal;
     font-size: 1vw;
@@ -549,7 +545,7 @@ footer
 {
     font-family: 'Amatic SC', cursive;
     font-weight: normal;
-    font-size: 3.5vw;
+    font-size: 4vw;
     margin-bottom: 4vw;
     margin-left: 3vw;
 }
@@ -583,15 +579,12 @@ footer
 }
 
 .content-bis {
-    padding-bottom: 5vw;
-}
-
-.content-bis p {
 
     font-family: 'Lora', serif; 
     font-weight: lighter;
     font-size: 1vw;
     padding-top: 1vw;
+    padding-bottom: 5vw;
     text-align: center;
 }
 
@@ -641,6 +634,7 @@ footer
     top: -0.4vw;
     left: 47.5%;
     font-size: 3vw;
+    transition: 0.5s;
 }
 
 .arrow i:hover, .arrowup i:hover{

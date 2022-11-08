@@ -8,7 +8,9 @@
     <label for="title" class="textcms size">Titre</label>
     <input type="text" name="title" class="field input" value="<?= $result[0]->getTitle() ?>">
     <label for="content" class="textcms size">Contenue de l'article</label>
-    <textarea type="text" name="content" rows="10" cols="70" class="field textarea"><?= $result[0]->getContent() ?></textarea>
+    <textarea type="text" name="content" rows="20" cols="100" class="field textarea"><?= $result[0]->getContent() ?></textarea>
+    <label for="contentBis" class="textcms size">Contenue secondaire de l'article</label>
+    <textarea type="text" name="contentBis" rows="20" cols="100" class="field textarea"><?= $result[0]->getContentBis() ?></textarea>
     <label for="category" class="textcms size">Catégorie</label>
     <select id="sel1" name="category[]" multiple class="select">
       <?php foreach($result[2] as $category) { ?>

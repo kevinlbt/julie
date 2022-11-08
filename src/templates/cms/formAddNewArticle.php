@@ -11,6 +11,8 @@
     <input type="text" name="title" class="field input" value="<?php if(isset($_POST['title'])) {echo $_POST['title'];} ?>"/>
     <label for="content" class="textcms size">Contenue de l'article</label>
     <textarea type="text" name="content" rows="20" cols="100" class="field textarea"><?php if(isset($_POST['content'])) {echo $_POST['content'];} ?></textarea>
+    <label for="contentBis" class="textcms size">Contenue secondaire de l'article</label>
+    <textarea type="text" name="contentBis" rows="20" cols="100" class="field textarea"><?php if(isset($_POST['contentBis'])) {echo $_POST['contentBis'];} ?></textarea>
     <div class="flex align collum">
       <label for="category" class="textcms size">Catégorie</label>
       <select name="category[]" multiple class="select">

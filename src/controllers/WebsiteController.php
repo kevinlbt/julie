@@ -24,9 +24,9 @@ class WebsiteController extends AbstractController {
     //home page
     public static function home () {
 
-        $res = Article::getArticles();
+        $res = Article::displayPublishedArticles();
 
-        self::renderBis('home', $res["data"]);
+        self::renderBis('home', $res);
     }
     
     //contact page with php mailer
@@ -112,9 +112,9 @@ class WebsiteController extends AbstractController {
 
     public static function articles () {
 
-        $res = Article::getArticles();
+        $res = Article::displayPublishedArticles();
 
-        self::renderBis('articles', $res["data"]);
+        self::renderBis('articles', $res);
     }
 
     public static function onearticle () {
@@ -123,11 +123,15 @@ class WebsiteController extends AbstractController {
 
             $id = explode('/', $_GET['url']);
 
-            $resone = Article::getOneArticles($id[1]);
+            $oneArticle = Article::getArticleContent($id);
 
-            $res = Article::getArticles();
+            $allArticle = Article::displayPublishedArticles();
 
-            self::renderBis('onearticle', [$resone['data'], $res['data']]);
+            $toremove = array($oneArticle);
+
+            $allArticle = array_udiff($allArticle, $toremove, function($a, $b) {return $a <=> $b;});
+
+            self::renderBis('onearticle', [$oneArticle, $allArticle]);
 
         }    
     }

@@ -50,7 +50,7 @@ class Router {
 
             $this->addRoute('logout',['AuthController','logout']);
 
-            $this->addRoute('articles',['ArticleController','displayAllArticle']);
+            $this->addRoute('gestion',['ArticleController','displayAllArticle']);
 
             $this->addRoute('new-article',['ArticleController','addNewArticle']);
 

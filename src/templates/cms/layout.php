@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex"/>
-    <title>gestion de vidéos</title>
+    <title>gestion d'articles</title>
     <link rel="stylesheet" href="https://use.typekit.net/bjn2kly.css">
-    <link href="http://localhost:8080/julie-website/style/style.css" rel="stylesheet"/>
+    <link href="http://localhost:8080/test-website/style/stylecms.css" rel="stylesheet"/>
 </head>
 <body>
     
@@ -19,7 +19,7 @@
 
         <?php if (isset($templates) && $templates === "login") {require './src/templates/cms/login.php'; } ?>
 
-        <?php if (isset($templates) && $templates === "articles") {require './src/templates/cms/listArticle.php'; } ?>
+        <?php if (isset($templates) && $templates === "gestion") {require './src/templates/cms/listArticle.php'; } ?>
 
         <?php if (isset($templates) && $templates === "new-article") {require './src/templates/cms/formAddNewArticle.php'; } ?>
 
@@ -29,7 +29,7 @@
 </body>
 
 <script src="./script/DeleteModal.js"></script>
-<script src="http://localhost:8080/julie-website/script/scriptSelect.js"></script>
+<script src="http://localhost:8080/test-website/script/scriptSelect.js"></script>
 <script src="./script/publishedButton.js"></script>
 
 </html>
