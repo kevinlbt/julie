@@ -5,14 +5,14 @@
         </div>
         <div>
             <p class="texte">Pour plus d'infos ou pour simplement me contacter : </p>
-            <a href="/test-website/contact" class="bouton"> Contact </a>
+            <a href="/test-website/contact" class="bouton-foot no-select"> Contact </a>
         </div>
         <div>
             <ul>
-                <li class="hoverr"><a href="/test-website/"> Home </a></li>
-                <li class="hoverr"><a href="/test-website/articles"> Articles </a></li>
-                <li class="hoverr"><a href="/test-website/parcours"> Témoignage </a></li>
-                <li class="hoverr"><a href="/test-website/apropos"> Qui suis-je </a></li>
+                <li><a class="bouton-foot no-select" href="/test-website/"> Accueil </a></li>
+                <li><a class="bouton-foot no-select" href="/test-website/articles"> Articles </a></li>
+                <li><a class="bouton-foot no-select" href="/test-website/parcours"> Témoignage </a></li>
+                <li><a class="bouton-foot no-select" href="/test-website/apropos"> Qui suis-je </a></li>
             </ul> 
         </div>
     </div>

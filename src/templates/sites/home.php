@@ -39,15 +39,15 @@
     <h2 class="titre_objectif"> Objectifs </h2>
     <div class="obj-bloc">
         <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="25">
-            <i class="fa-solid fa-bullseye fa-8x"></i>
+            <img src="./assets/images/lock.png" alt="">
             <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit a commodi beatae consequatur ipsum esse consectetur sint.</p>
         </div>
         <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="25">
-            <i class="fa-solid fa-vector-square fa-8x"></i>
+        <img src="./assets/images/target.png" alt="">
             <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit a commodi beatae consequatur ipsum esse consectetur sint.</p>
         </div>
         <div data-aos="fade-left" data-aos-duration="1500" data-aos-delay="25">
-            <i class="fa-regular fa-clipboard fa-8x"></i>
+        <img src="./assets/images/loupe.png" alt="">
             <p class="texte">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit a commodi beatae consequatur ipsum esse consectetur sint.</p>
         </div>
     </div>
@@ -74,7 +74,9 @@
         <div class="redim">
             <img src="<?= $result[$i]->getImagePath(); ?>" alt="" class="img">
         </div>
-        <a href="./onearticle/<?= $result[$i]->getId(); ?>" class="bouton">En savoir plus</a>
+        <a href="./onearticle/<?= $result[$i]->getId(); ?>" class="bouton noselect">En savoir plus</a>
+        <?php if($i === 0) {?> <img src="./assets/images/carre.png" class="carre" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" data-aos-delay="1300" data-aos-easing="ease-in-out"></img><?php ;} ?>
+        <?php if($i === 2) {?> <img src="./assets/images/carre.png" class="carre-bottom" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" data-aos-delay="1300" data-aos-easing="ease-in-out" ></img><?php ;} ?>
     </div>
 
 <?php endfor ?>

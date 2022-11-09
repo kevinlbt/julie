@@ -147,18 +147,18 @@ class Article {
     
     //update the select article
     public static function updateArticle ($id) {
-
+        
         if (isset($_POST)) {
             if (isset($_POST['title']) && !empty($_POST['title'])
             && isset($_POST['content'])
-            && isset($_POST['content_bis'])
+            && isset($_POST['contentBis'])
             && isset($_POST['category']) && !empty($_POST['category']) ) {
 
                 $article = self::getArticleContent($id);
 
                 $title = self::sanitizing($_POST['title']);
                 $content = self::sanitizing($_POST['content']);
-                $contentBis = self::sanitizing($_POST['content_bis']);
+                $contentBis = self::sanitizing($_POST['contentBis']);
 
                 if (empty($_FILES['images']['name'])) {
                     $imagePath = $article->getImagePath();
